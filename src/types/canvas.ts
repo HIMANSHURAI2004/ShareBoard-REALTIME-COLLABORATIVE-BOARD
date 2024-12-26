@@ -12,8 +12,8 @@ export type Camera = {
 export enum LayerType {
     Rectangle,
     Ellipse,
-    Text,
     Path,
+    Text,
     Note,
 }
 
@@ -21,8 +21,8 @@ export type RectangleLayer = {
     type: LayerType.Rectangle;
     x: number;
     y: number;
-    width: number;
     height: number;
+    width: number;
     fill: Color;
     value?: string;
 }
