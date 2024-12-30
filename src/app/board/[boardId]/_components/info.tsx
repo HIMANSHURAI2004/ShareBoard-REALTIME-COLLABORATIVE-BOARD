@@ -51,15 +51,15 @@ const Info = ({
                 <Link href='/'>
                     <Image
                         src="/logo.svg"
-                        alt="Board logo"
-                        height={60}
-                        width={60}
+                        alt="ShareBoard logo"
+                        height={50}
+                        width={50}
                     />
                     <span className={cn(
-                        "font-semibold text-xl ml-2 text-black",
+                        "font-semibold text-lg md:text-xl ml-1 text-black",
                         font.className,
                     )}>
-                        Board
+                        ShareBoard
                     </span>
                 </Link>
             </Button>

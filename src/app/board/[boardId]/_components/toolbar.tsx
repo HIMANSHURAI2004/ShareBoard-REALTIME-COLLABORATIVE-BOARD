@@ -1,7 +1,10 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import { ToolButton } from './tool-button'
-import { Circle, MousePointer2, Pencil, Redo2, Square, StickyNote, Type, Undo2 } from 'lucide-react'
-import { CanvasMode, CanvasState, LayerType } from '@/types/canvas';
+import { ArrowLeft, ArrowRight, Circle, MousePointer2, Pencil, Redo2, Square, StickyNote, Type, Undo2 } from 'lucide-react'
+import { CanvasMode, CanvasState, Color, LayerType } from '@/types/canvas';
+import BgColorButton from './bgColorButton';
+import { Button } from '@/components/ui/button';
 
 interface ToolbarProps {
     canvasState : CanvasState;
@@ -10,6 +13,8 @@ interface ToolbarProps {
     redo : () => void;
     canUndo : boolean;
     canRedo : boolean;
+    backgroundColor : Color;
+    setBackgroundColor : (color : Color) => void;
 }
 
 const Toolbar = ({
@@ -19,9 +24,16 @@ const Toolbar = ({
     redo,
     canUndo,
     canRedo,
+    backgroundColor,
+    setBackgroundColor,
 }:ToolbarProps) => {
+  const [position, setPosition] = useState("left")
   return (
-    <div className='absolute top-[50%] -translate-y-[50%] left-2 flex flex-col gap-y-4'>
+    <div className={`absolute top-[50%] -translate-y-[50%] ${position}-2 flex flex-col gap-y-4`}>
+    
+        <div className='bg-white rounded-md p-1.5 flex gap-y-1 flex-col items-center shadow-md'>
+            <BgColorButton backgroundColor={backgroundColor} setBackgroundColor = {setBackgroundColor}/>
+        </div>
         <div className='bg-white rounded-md p-1.5 flex gap-y-1 flex-col items-center shadow-md'>
             <ToolButton
                 label='Select'
@@ -109,6 +121,11 @@ const Toolbar = ({
                 isDisabled={!canRedo}
             />
         </div>
+        <Button onClick={() => setPosition(position == "left" ? "right":"left")} className={`rounded-full bg-white`} variant='board'>
+                    {
+                      position == "left" ? <ArrowRight className='h-2 w-2' color='black'/> : <ArrowLeft className='h-2 w-2' color='black'/>
+                    }
+                  </Button>
     </div>
   )
 }

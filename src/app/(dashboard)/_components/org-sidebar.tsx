@@ -18,18 +18,19 @@ const OrgSidebar = () => {
     const searchParams = useSearchParams()
     const favorites = searchParams.get('favorites')
   return (
-    <div className='hidden lg:flex flex-col space-y-6 w-[206px] pl-5 pt-5'>
+    <div className='hidden lg:flex flex-col space-y-6 w-[210px] pl-5 pt-5'>
         <Link href='/'>
             <div className='flex items-center gap-x-2'>
                 <Image src='/logo.svg' width={60} height={60} alt='logo'/>
+                <span className={cn(
+                    "font-semibold text-2xl",
+                    font.className
+                )}>
+                    ShareBoard
+                </span>
             </div>
-            <span className={cn(
-                "font-semibold text-2xl",
-                font.className
-            )}>
-                Board
-            </span>
         </Link>
+        
         <OrganizationSwitcher
             hidePersonal
             appearance={{

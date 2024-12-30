@@ -70,7 +70,7 @@ const BoardCard = ({
   return (
     <Link href={`/board/${id}`}>
         <div className='group aspect-[100/127] border rounded-lg flex flex-col overflow-hidden justify-between'>
-            <div className='relative flex-1 bg-amber-50'>
+            <div className='relative flex-1 bg-slate-50'>
                 <Image
                  src={imageUrl}
                  alt = {title}

@@ -73,7 +73,7 @@ export const Actions = ({
                 >
                     <Button
                      variant='ghost'
-                    className="p-3 cursor-pointer text-sm w-full justify-start font-normal">
+                    className="p-3 cursor-pointer text-sm w-60 justify-start font-normal">
                         <Trash2 className="h-4 w-4 mr-2"/>
                         Delete    
                     </Button>
