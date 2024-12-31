@@ -5,17 +5,19 @@ import { Room } from '@/components/Room';
 
 
 interface BoardIdPageProps {
-    params : {
-        boardId : string;
-    };
+  params: Promise<{
+    boardId: string;
+  }>;
 }
-const BoardIdPage = ({params,} : BoardIdPageProps) => {
+
+const BoardIdPage = async ({ params }: BoardIdPageProps) => {
+  const resolvedParams = await params; // Resolve the promise if params is asynchronous
 
   return (
-    <Room roomId={params.boardId} fallback={<Loading/>}>
-        <Canvas boardId = {params.boardId}/>
+    <Room roomId={resolvedParams.boardId} fallback={<Loading />}>
+      <Canvas boardId={resolvedParams.boardId} />
     </Room>
-  )
-}
+  );
+};
 
-export default BoardIdPage
+export default BoardIdPage;
