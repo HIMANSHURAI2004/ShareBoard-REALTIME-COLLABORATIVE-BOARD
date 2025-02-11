@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ShareBoard 🖌️
 
-## Getting Started
+**ShareBoard** is a powerful real-time collaborative whiteboard built with **Next.js 14**,**Clerk**, **Convex**, and **Liveblocks**. It enables teams to brainstorm, sketch, and collaborate seamlessly.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🛠️ **Whiteboard from scratch** – Draw, write, and collaborate in real-time.
+- 🧰 **Rich Toolbar** – Includes text, shapes, sticky notes, and a freehand pencil tool.
+- 🪄 **Layering Functionality** – Arrange elements with ease.
+- 🎨 **Coloring System** – Customize elements with different colors.
+- ↩️ **Undo & Redo** – Never lose progress.
+- ⌨️ **Keyboard Shortcuts** – Boost efficiency with quick commands.
+- 🤝 **Real-time Collaboration** – Work together using **Liveblocks**.
+- 💾 **Real-time Database** – Powered by **Convex** for instant updates.
+- 🔐 **Authentication & Organization Management** – Secure access with **Clerk** for auth, orgs, and invites.
+- ⭐ **Favoriting Functionality** – Save important whiteboards.
+- 🌐 **Built with Next.js 14** – Modern and optimized framework.
+- 💅 **Styled with TailwindCSS & ShadcnUI** – Clean and elegant UI.
+
+## 🛠️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/your-username/shareboard.git
+cd shareboard
+```
+CONVEX_DEPLOYMENT=
+
+NEXT_PUBLIC_CONVEX_URL=
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+LIVEBLOCKS_SECRET_KEY=
+
+### 2️⃣ Install Dependencies
+```sh
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3️⃣ Set Up Environment Variables
+Create a .env file in the root directory and add the following variables:
+```plaintext
+CONVEX_DEPLOYMENT=
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+NEXT_PUBLIC_CONVEX_URL=
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-## Learn More
+LIVEBLOCKS_SECRET_KEY=
+```
 
-To learn more about Next.js, take a look at the following resources:
+###4️⃣ Start the Backend
+Run the Convex backend:
+```sh
+npx convex dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5️⃣ Run the Next.js App
+```sh
+npm run dev
+```
+Then open your browser and go to http://localhost:3000.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 📌 Tech Stack
+- Frontend: Next.js 14, TailwindCSS, ShadcnUI
+- Backend: Convex (real-time database)
+- Collaboration: Liveblocks (real-time sync)
+- Authentication: Clerk (user management, orgs, invites)
