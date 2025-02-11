@@ -25,14 +25,6 @@
 git clone https://github.com/your-username/shareboard.git
 cd shareboard
 ```
-CONVEX_DEPLOYMENT=
-
-NEXT_PUBLIC_CONVEX_URL=
-
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-
-LIVEBLOCKS_SECRET_KEY=
 
 ### 2️⃣ Install Dependencies
 ```sh
@@ -52,7 +44,7 @@ CLERK_SECRET_KEY=
 LIVEBLOCKS_SECRET_KEY=
 ```
 
-###4️⃣ Start the Backend
+### 4️⃣ Start the Backend
 Run the Convex backend:
 ```sh
 npx convex dev
