@@ -2,6 +2,10 @@
 
 **ShareBoard** is a powerful real-time collaborative whiteboard built with **Next.js 14**,**Clerk**, **Convex**, and **Liveblocks**. It enables teams to brainstorm, sketch, and collaborate seamlessly.
 
+## 🌐 Live Demo
+
+🚀 Try it now: [https://share-board-realtime-collaborative-board.vercel.app/](https://share-board-realtime-collaborative-board.vercel.app/)
+
 ## 🚀 Features
 
 - 🛠️ **Whiteboard from scratch** – Draw, write, and collaborate in real-time.
